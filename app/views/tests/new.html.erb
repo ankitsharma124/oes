@@ -1,0 +1,24 @@
+<h1>New Test</h1>
+
+<h3>Import Test From Excel</h1>
+
+
+<div class="form-group">
+    <h5>Select File</h5>
+<%= form_tag import_tests_path, multipart: true do %>
+<%= hidden_field_tag :subject_id, @test.subject_id %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+  <%= hidden_field_tag :subject_id, params[:subject_id] %>
+  <% end %>
+</div>
+
+
+
+<div class=" actions form-group text-center">
+    <%#= f.submit "Add", class: "btn btn-primary account-btn" %>
+</div>
+<div class=" actions form-group text-center">
+    <%= link_to 'Back', standards_path %>
+</div>
+

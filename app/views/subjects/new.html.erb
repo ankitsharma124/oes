@@ -1,0 +1,18 @@
+<h1>Add Standard</h1>
+
+<%= form_for @subject do |f| %>
+
+<div class="form-group">
+    <%= f.label :name, 'Subject Name' %><br />
+    <%= f.hidden_field :standard_id, :value => @subject.standard_id %>
+    <%= f.text_field :name, autofocus: true, class: "form-control" %>
+</div>
+
+
+<div class=" actions form-group text-center">
+    <%= f.submit "Add", class: "btn btn-primary account-btn" %>
+</div>
+<div class=" actions form-group text-center">
+    <%= link_to 'Back', standards_path %>
+</div>
+<%end%>
